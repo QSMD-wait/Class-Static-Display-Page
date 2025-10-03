@@ -1,0 +1,12 @@
+{
+  "_comment": "这是默认主题预设 (Default Theme Preset)。site.config.yaml 中的 theme.custom 配置可以覆盖这里的设置。",
+  "colors": {
+    "primary": "#3498db",
+    "background": "#ffffff",
+    "text": "#333333",
+    "border": "#eeeeee"
+  },
+  "layout": {
+    "borderRadius": "8px"
+  }
+}

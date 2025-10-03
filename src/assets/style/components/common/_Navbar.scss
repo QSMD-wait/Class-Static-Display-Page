@@ -1,0 +1,50 @@
+/*
+ * @file: /src/assets/style/components/common/_Navbar.scss
+ * @description: 导航栏组件 (Navbar.vue) 的专属样式。
+ *              遵循 BEM 命名规范。
+ * @version: 1.0.0
+ * @author: '青色漫地_wait'
+ * @date: 2025-10-02
+*/
+
+@use '../../base/global' as global;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: global.$spacing-md global.$spacing-xl;
+  background-color: global.$color-gray-0; // 使用浅灰色背景
+  border-bottom: 1px solid global.$color-gray-3;
+  transition: background-color 0.3s ease;
+
+  &__brand-link {
+    text-decoration: none;
+    color: global.$color-gray-9; // 使用深色文本
+  }
+
+  &__site-title {
+    font-size: global.$font-size-lg;
+    font-weight: global.$font-weight-bold;
+  }
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: global.$spacing-lg;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: global.$color-gray-7; // 使用次要文本颜色
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &--active {
+      color: global.$color-primary;
+    }
+  }
+}

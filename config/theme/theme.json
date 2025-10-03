@@ -1,0 +1,13 @@
+{
+  "current": "default",
+  "presets": {
+    "default": "./theme-presets/default.json",
+    "dark": "./theme-presets/dark.json",
+    "warm": "./theme-presets/warm.json",
+    "academic": "./theme-presets/academic.json"
+  },
+  "custom": {
+    "enabled": true,
+    "file": "./user-theme.json"
+  }
+}

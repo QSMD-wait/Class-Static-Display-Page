@@ -1,0 +1,29 @@
+/*
+ * @file: /src/assets/style/pages/_index.scss
+ * @description: 首页 (index.vue) 的专属样式。
+ * @version: 1.0.0
+ * @author: '青色漫地_wait'
+ * @date: 2025-10-02
+*/
+
+@use '../base/global' as global;
+
+.index-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: global.$spacing-xl;
+
+  h1 {
+    font-size: 3rem; // 保持一个较大的标题字体大小
+    color: global.$color-primary;
+    margin-bottom: global.$spacing-md;
+  }
+
+  p {
+    font-size: global.$font-size-lg;
+    color: global.$color-gray-7;
+  }
+}

@@ -1,0 +1,21 @@
+/*
+ * @file: /src/assets/style/main.scss
+ * @description: 全局 SCSS 主入口文件。
+ *              负责按顺序引入项目所有的样式文件，形成最终的样式表。
+ * @version: 1.0.0
+ * @author: '青色漫地_wait'
+ * @date: 2025-10-02
+*/
+
+// 1. 基础样式 (Base)
+//    包含变量、重置、通用辅助类等。
+@use 'base/global';
+@use 'base/base';
+
+// 2. 组件样式 (Components)
+//    全局可复用的组件级样式。
+@use 'components/common/Navbar';
+
+// 3. 页面样式 (Pages)
+//    特定页面的专属样式。
+@use 'pages/index';

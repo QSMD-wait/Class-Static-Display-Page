@@ -1,0 +1,66 @@
+# -----------------------------------------------------------------------------
+# 班级官网主配置文件
+# -----------------------------------------------------------------------------
+# 在这里定义班级网站的核心信息，包括班级详情、主题外观、功能开关等。
+# -----------------------------------------------------------------------------
+
+# 班级信息 (Class Information)
+# 用于展示班级和学校的基本情况。
+class:
+  name: "高一(1)班"
+  school: "某某高级中学"
+  # 班级口号或简介
+  slogan: "团结奋进，追求卓越"
+
+# 主题配置 (Theme Configuration)
+# 控制网站的视觉外观。
+theme:
+  # 选择一个预设主题 (对应 config/theme/theme-presets/ 中的文件名)
+  # 例如: 'default', 'academic', 'playful'
+  preset: "default"
+
+  # 自定义主题设置 (会覆盖预设中的同名配置)
+  custom:
+    colors:
+      primary: ""    # 主色调 (留空则使用预设值)
+      background: "" # 页面背景色 (留空则使用预设值)
+    layout:
+      # 全局圆角大小
+      borderRadius: "12px"
+
+  # 图片资源配置 (Image Assets)
+  # 建议将图片存放在 /public/uploads/ 目录下
+  images:
+    # 网站 Logo，显示在导航栏
+    logo: "/uploads/class-logo.png"
+    # 首页主视觉图
+    banner: "/uploads/class-banner.jpg"
+    # 全局背景图 (如果设置，会覆盖背景色)
+    background: "/uploads/custom-background.jpg"
+
+# 功能配置 (Feature Flags)
+# 用于开启或关闭网站的特定功能。
+features:
+  # 是否启用暗色/亮色模式切换功能
+  darkMode: true
+  # 是否允许加载用户自定义的 CSS (例如: /public/custom.css)
+  customCSS: true
+
+# 导航链接 (Navigation Links)
+# 显示在网站的头部或侧边栏。
+navigation:
+  - name: '班级首页'
+    path: '/'
+  - name: '班级相册'
+    path: '/album'
+  - name: '荣誉墙'
+    path: '/honors'
+  - name: '关于我们'
+    path: '/about'
+
+# 页脚配置 (Footer Configuration)
+footer:
+  # 版权信息，{year} 和 {class.name} 会被自动替换
+  copyright: '© {year} {class.name}. All rights reserved.'
+  # 可以添加备案信息等
+  extra: '由 {class.school} 提供技术支持'

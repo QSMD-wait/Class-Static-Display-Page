@@ -1,5 +1,7 @@
 {
-  "name": "nuxt-app",
+  "name": "class-static-display-page",
+  "version": "0.0.1",
+  "author": "青色漫地_wait",
   "type": "module",
   "private": true,
   "scripts": {
@@ -20,10 +22,14 @@
     "@unhead/vue": "^2.0.17",
     "better-sqlite3": "^12.4.1",
     "eslint": "^9.36.0",
+    "gsap": "^3.13.0",
     "ipx": "^3.1.1",
     "nuxt": "^4.1.2",
     "typescript": "^5.9.3",
     "vue": "^3.5.22",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
   }
 }

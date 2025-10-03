@@ -1,0 +1,37 @@
+/*
+ * @file: /src/assets/style/base/_base.scss
+ * @description: 基础样式文件，定义全局的 HTML 元素样式和通用规则。
+ * @version: 1.0.0
+ * @author: '青色漫地_wait'
+ * @date: 2025-10-02
+*/
+
+@use 'global' as global;
+
+// 1. 全局盒模型设置
+// ----------------------------------------------------------------------------
+// 将所有元素的盒模型设置为 border-box，使布局计算更直观。
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+
+// 2. 根元素与基础排版
+// ----------------------------------------------------------------------------
+html {
+  // 设置根字体大小，为 rem 单位提供基准。
+  font-size: 16px;
+}
+
+body {
+  // 设置应用的默认字体、行高和颜色，提供一致的排版基础。
+  font-family: global.$font-family-sans-serif;
+  line-height: global.$line-height-base;
+  color: global.$color-text-primary;
+  background-color: global.$color-background;
+  margin: 0; // 移除 body 的默认外边距
+  -webkit-font-smoothing: antialiased; // 优化字体在 Webkit 浏览器上的渲染效果
+  -moz-osx-font-smoothing: grayscale; // 优化字体在 Firefox 上的渲染效果
+}
