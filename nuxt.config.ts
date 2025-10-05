@@ -17,6 +17,10 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    // -- 自定义模块 --
+    './src/modules/site-config',
+
+    // -- 社区模块 --
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',

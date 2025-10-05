@@ -7,7 +7,7 @@
 # 班级信息 (Class Information)
 # 用于展示班级和学校的基本情况。
 class:
-  name: "高一(1)班"
+  name: "高一(5)班"
   school: "某某高级中学"
   # 班级口号或简介
   slogan: "团结奋进，追求卓越"

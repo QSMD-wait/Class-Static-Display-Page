@@ -24,31 +24,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue';
-import { useNuxtApp } from '#app';
-import type { gsap } from 'gsap';
 import Navbar from '@/components/common/Navbar.vue';
+import { useGsapAnimator } from '@/composables/animations/useGsapAnimator';
 
-// -- Refs --
-// GSAP 上下文，用于管理动画生命周期
-let ctx: gsap.Context;
-
-// -- Hooks --
-onMounted(() => {
-  const { $gsap } = useNuxtApp();
-
-  // 使用 gsap.context() 来包裹所有的 GSAP 调用
-  // 这将确保在组件卸载时，所有相关的动画和事件监听器都会被自动清理
-  ctx = $gsap.context(() => {
-    // 在这里可以安全地创建动画...
-  });
-});
-
-onUnmounted(() => {
-  // 显式调用 revert() 来清理上下文中的所有动画
-  if (ctx) {
-    ctx.revert();
-  }
+// 使用新创建的 Composable 来管理动画
+// 它会自动处理 GSAP 上下文的创建和清理
+useGsapAnimator((gsap, context) => {
+  // 动画逻辑现在被封装在这里，既安全又整洁。
+  // 例如: gsap.from('.default-layout__main', { opacity: 0, y: 20, duration: 0.5 });
 });
 </script>
 
